@@ -168,10 +168,10 @@ function App() {
         </View>
 
         <ScrollView showsVerticalScrollIndicator={false}>
-          <StatusBar
+          {/* <StatusBar
           // barStyle={isDarkMode ? 'light-content' : 'dark-content'}
           // backgroundColor={backgroundStyle.backgroundColor}
-          />
+          /> */}
 
 
 
