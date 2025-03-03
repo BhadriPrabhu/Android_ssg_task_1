@@ -66,8 +66,8 @@ function App() {
   const [isProfile, setIsProfile] = useState(false);
 
   const toggleSwitch = () => {
-    setIsEnabled((previousState) => !previousState);i
-    setColor(isEnabled);
+    setIsEnabled((previousState) => !previousState);
+    setColor(!isEnabled);
   }
   const [isLoading, setIsLoading] = useState(false);
 
