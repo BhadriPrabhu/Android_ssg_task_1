@@ -1,0 +1,76 @@
+import { StyleSheet } from "react-native";
+import { useColor } from "./store/store";
+
+
+export const styles = () => {
+
+    const checkColor = useColor((state) => state.themeColor);
+
+
+    return StyleSheet.create({
+        safe: { backgroundColor: checkColor ? "#E3E3E3" : "#1F1F1F", flex: 1 },
+        key: { flex: 1 },
+        div1: { padding: 10, borderBottomWidth: 1, borderBottomColor: checkColor ? "#D5D5D5" : "#313131", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingRight: 20, paddingLeft: 20 },
+        text1: { color: checkColor ? "black" : "white", fontSize: 24, fontWeight: "bold", },
+        div2: { display: "flex", flexDirection: "row", gap: 10 },
+        image: { width: 40, height: 40, borderRadius: 50 },
+        div3: { margin: 15, display: "flex", flexDirection: "column", gap: 20, marginTop: 20 },
+        div4: { padding: 20, backgroundColor: "#4EAF51", borderRadius: 15, display: "flex", flexDirection: "column", gap: 15 },
+        text2: { color: "white", fontSize: 20, fontWeight: "bold" },
+        div5: { display: "flex", flexDirection: "row", justifyContent: "space-between", },
+        div6: { padding: 20, backgroundColor: checkColor ? "white" : "#292929", borderRadius: 15, display: "flex", flexDirection: "column", gap: 25, shadowColor: "#000", shadowOffset: { width: 0, height: 0 }, shadowRadius: 10, shadowOpacity: 1, elevation: 60, paddingBottom: 25 },
+        text3: { color: checkColor ? "black" : "white", fontSize: 20, fontWeight: "bold", },
+        div7: { display: "flex", flexDirection: "row", justifyContent: "space-between", },
+        flat: { flexGrow: 1, justifyContent: "space-between" },
+        div8: { backgroundColor: checkColor ? "white" : "#292929", shadowColor: "#000", shadowOffset: { width: 40, height: 40 }, shadowRadius: 1, shadowOpacity: 1, elevation: 60, padding: 20, borderRadius: 15, display: "flex", flexDirection: "column", gap: 15, paddingBottom: 25, paddingTop: 20 },
+        div9: { fontSize: 20, color: checkColor ? "black" : "white", fontWeight: "bold" },
+        div10: { display: "flex", flexDirection: "row", gap: 15 },
+        mod1: { display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0,0,0,0.5)", flex: 1, },
+        mod2: { backgroundColor: "white", padding: 30, borderRadius: 15, display: "flex", flexDirection: "column", alignItems: "center", gap: 10 },
+        mod3: { color: "black", fontSize: 20, fontWeight: "bold" },
+        mod4: { color: "#A1A1A1", fontSize: 15 },
+        mod5: { display: "flex", flexDirection: "row", justifyContent: "space-between", gap: 10, marginTop: 20 },
+        mod6: { color: "black", padding: 15, paddingRight: 40, paddingLeft: 40, fontSize: 16 },
+        mod7: { color: "white", padding: 15, paddingRight: 40, paddingLeft: 40, fontSize: 16 },
+        mode1: { display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0,0,0,0.5)", flex: 1, },
+        mode2: { backgroundColor: "white", padding: 30, borderRadius: 15, display: "flex", flexDirection: "column", alignItems: "center", gap: 10 },
+        mode3: { color: "black", fontSize: 20, fontWeight: "bold" },
+        mode4: { borderWidth: 1, borderColor: "black", display: "flex", flexDirection: "row", alignSelf: "stretch", borderRadius: 5, padding: 5, color: "black" },
+        mode5: { display: "flex", flexDirection: "row", justifyContent: "space-between", gap: 10, marginTop: 20 },
+        mode6: { color: "black", padding: 15, paddingRight: 40, paddingLeft: 40, fontSize: 16 },
+        but1: { backgroundColor: "#54AD52", borderRadius: 10 },
+        mode7: { color: "white", padding: 15, paddingRight: 40, paddingLeft: 40, fontSize: 16 },
+        view1: { display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0,0,0,0.5)", flex: 1, },
+        view2: { backgroundColor: "white", padding: 30, borderRadius: 15, display: "flex", flexDirection: "column", alignItems: "center", gap: 10 },
+        image2: { width: 200, height: 200, borderRadius: 100},
+        view3: { color: "black", fontSize: 28, fontWeight: "bold" },
+        view4: { marginTop: 20 },
+        view5: { backgroundColor: checkColor ? "white" : "#292929", shadowColor: "#000", shadowOffset: { width: 40, height: 40 }, shadowRadius: 1, shadowOpacity: 1, elevation: 60, padding: 20, borderRadius: 15, display: "flex", flexDirection: "column", gap: 35, paddingBottom: 25, paddingTop: 25 },
+        view6: { display: "flex", flexDirection: "row", justifyContent: "space-between" },
+        view7: { color: checkColor ? "black" : "white", fontSize: 20, fontWeight: "bold" },
+        but2: { backgroundColor: "#4DB151", padding: 8, borderRadius: 20, paddingRight: 14, paddingLeft: 14, },
+        view8: { color: "white", fontSize: 15 },
+        view9: { padding: 10, display: "flex", flexDirection: "row", justifyContent: "space-between" },
+        view10: { color: checkColor ? "black" : "white", fontSize: 16 },
+        view11: { color: "#4DB151", fontSize: 16 },
+        view12: { color: "white", backgroundColor: "#4DB151", padding: 10, fontSize: 18, borderRadius: 10, },
+        view13: { gap: 10 },
+        but3: { backgroundColor: "#4DB151", padding: 20, borderRadius: 15, display: "flex", flexDirection: "row", justifyContent: "center", marginTop: 10, marginBottom: 10, alignItems: "center", gap: 10 },
+        load1: { fontSize: 20, fontWeight: "bold", color: "white" },
+        load2: { fontSize: 20, fontWeight: "bold", color: "white" },
+        home1: { display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", gap: 5 },
+        home2: {color: "white", fontWeight: "bold", fontSize: 20},
+        home3: {color: "white"},
+        pro1: {display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", gap: 5 },
+        pro2: {width: 25, height: 25, borderRadius: 50},
+        pro3: {color: checkColor ? "#494949" : "white"},
+        work1: {padding: 20, borderRadius: 15, display: "flex", flexDirection: "column", gap: 35},
+        work2: {display: "flex", flexDirection: "column", gap: 5},
+        work3: {color: "white", fontSize: 20, fontWeight: "bold",},
+        work4: {color: "white", fontSize: 16, fontWeight: "100"},
+        work5: {display: "flex", justifyContent: "space-between", flexDirection: "row", gap: 105},
+        work6: {color: "white", fontSize: 16},
+        work7: {color: "white", fontSize: 16}
+    })
+};
+
